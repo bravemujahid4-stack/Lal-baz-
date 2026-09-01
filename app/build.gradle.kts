@@ -31,7 +31,6 @@ buildTypes {
         proguardFiles(
             getDefaultProguardFile("proguard-android-optimize.txt")
         )
-        signingConfig = signingConfigs.getByName("release")
     }
 
     debug {
@@ -125,4 +124,5 @@ dependencies {
   debugImplementation(libs.androidx.compose.ui.tooling)
   "ksp"(libs.androidx.room.compiler)
   "ksp"(libs.moshi.kotlin.codegen)
+}
 }
