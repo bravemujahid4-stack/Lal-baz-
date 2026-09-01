@@ -23,7 +23,7 @@ android {
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
   }
 
-  sigsigningConfigs {
+  signingConfigs {
     create("release") {
         val keystorePath = System.getenv("KEYSTORE_PATH")
         storeFile = file(keystorePath)
