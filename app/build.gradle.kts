@@ -23,15 +23,6 @@ android {
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
   }
 
-  signingConfigs {
-    create("release") {
-        val keystorePath = System.getenv("KEYSTORE_PATH")
-        storeFile = file(keystorePath)
-        storePassword = System.getenv("STORE_PASSWORD")
-        keyAlias = "upload"
-        keyPassword = System.getenv("KEY_PASSWORD")
-    }
-}
 
 buildTypes {
     release {
@@ -49,7 +40,6 @@ buildTypes {
   compileOptions {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
-  }
   buildFeatures {
     compose = true
     buildConfig = true
